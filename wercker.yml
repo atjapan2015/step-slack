@@ -15,7 +15,7 @@ build:
         - slack-notifier:
             url: $SLACK_URL
             channel: notifications
-            username: myamazingbotname
+            username: werckerbot
             branch: master            
 
 publish:
