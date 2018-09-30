@@ -9,6 +9,9 @@ build:
             code: rm -rf $WERCKER_ROOT/.git
             
     after-steps:
+        - install-packages:
+            packages: curl
+        
         - slack-notifier:
             url: $SLACK_URL
             channel: notifications
