@@ -7,6 +7,13 @@ build:
         - script:
             name: prepare output
             code: rm -rf $WERCKER_ROOT/.git
+            
+    after-steps:
+        - slack-notifier:
+            url: $SLACK_URL
+            channel: notifications
+            username: myamazingbotname
+            branch: master            
 
 publish:
   steps:
